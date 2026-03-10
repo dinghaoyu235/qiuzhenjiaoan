@@ -1,0 +1,105 @@
+import { StyleSheet } from 'react-native';
+import { Spacing, BorderRadius, Theme } from '@/constants/theme';
+
+export const createStyles = (theme: Theme) => {
+  return StyleSheet.create({
+    scrollContent: {
+      flexGrow: 1,
+      backgroundColor: theme.backgroundRoot,
+    },
+    loadingContainer: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    errorContainer: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      paddingHorizontal: Spacing.lg,
+    },
+    header: {
+      marginBottom: Spacing.lg,
+      paddingHorizontal: Spacing.lg,
+      paddingTop: Spacing.xl,
+    },
+    section: {
+      padding: Spacing.lg,
+      borderRadius: BorderRadius.lg,
+      marginBottom: Spacing.lg,
+      marginHorizontal: Spacing.lg,
+      borderWidth: 1.5,
+      borderColor: theme.border,
+      backgroundColor: theme.backgroundDefault,
+      boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.04)',
+    },
+    sectionTitle: {
+      marginBottom: Spacing.md,
+      fontWeight: '700' as const,
+      fontSize: 18,
+      color: theme.primary,
+    },
+    subSection: {
+      marginTop: Spacing.sm,
+      marginBottom: Spacing.sm,
+    },
+    infoRow: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      marginBottom: Spacing.sm,
+    },
+    buttonContainer: {
+      marginTop: Spacing.xl,
+      paddingHorizontal: Spacing.lg,
+      gap: Spacing.md,
+      paddingBottom: Spacing['5xl'],
+    },
+    pptButton: {
+      backgroundColor: '#FF6B35',
+      paddingVertical: Spacing.lg,
+      paddingHorizontal: Spacing.xl,
+      borderRadius: BorderRadius.lg,
+      alignItems: 'center',
+      height: 56,
+      justifyContent: 'center',
+      flexDirection: 'row',
+      gap: Spacing.sm,
+      boxShadow: '0px 4px 12px rgba(255, 107, 53, 0.35)',
+    },
+    primaryButton: {
+      backgroundColor: theme.primary,
+      paddingVertical: Spacing.lg,
+      paddingHorizontal: Spacing.xl,
+      borderRadius: BorderRadius.lg,
+      alignItems: 'center',
+      height: 56,
+      justifyContent: 'center',
+      flexDirection: 'row',
+      gap: Spacing.sm,
+      boxShadow: '0px 4px 12px rgba(22, 120, 209, 0.35)',
+    },
+    shareButton: {
+      backgroundColor: '#07C160',
+      paddingVertical: Spacing.lg,
+      paddingHorizontal: Spacing.xl,
+      borderRadius: BorderRadius.lg,
+      alignItems: 'center',
+      height: 56,
+      justifyContent: 'center',
+      flexDirection: 'row',
+      gap: Spacing.sm,
+      boxShadow: '0px 4px 12px rgba(7, 193, 96, 0.35)',
+    },
+    secondaryButton: {
+      backgroundColor: theme.backgroundDefault,
+      paddingVertical: Spacing.lg,
+      paddingHorizontal: Spacing.xl,
+      borderRadius: BorderRadius.lg,
+      alignItems: 'center',
+      borderWidth: 1.5,
+      borderColor: theme.border,
+      height: 56,
+      justifyContent: 'center',
+    },
+  });
+};

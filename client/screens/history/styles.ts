@@ -1,0 +1,212 @@
+import { StyleSheet } from 'react-native';
+import { Spacing, BorderRadius, Theme } from '@/constants/theme';
+
+export const createStyles = (theme: Theme) => {
+  return StyleSheet.create({
+    scrollContent: {
+      flexGrow: 1,
+      backgroundColor: theme.backgroundRoot,
+    },
+    loadingContainer: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+    },
+    header: {
+      marginBottom: Spacing.lg,
+      paddingHorizontal: Spacing.lg,
+      paddingTop: Spacing.xl,
+    },
+    tabsContainer: {
+      marginBottom: Spacing.lg,
+      paddingHorizontal: Spacing.lg,
+    },
+    tabsScrollContent: {
+      gap: Spacing.sm,
+      paddingRight: Spacing.sm,
+    },
+    tabButton: {
+      paddingHorizontal: Spacing.lg,
+      paddingVertical: Spacing.sm,
+      borderRadius: BorderRadius.lg,
+      backgroundColor: theme.backgroundDefault,
+      borderWidth: 1.5,
+      borderColor: theme.border,
+    },
+    tabButtonActive: {
+      backgroundColor: theme.primary,
+      borderColor: theme.primary,
+    },
+    emptyContainer: {
+      padding: Spacing.xl,
+      borderRadius: BorderRadius.lg,
+      alignItems: 'center',
+      marginHorizontal: Spacing.lg,
+      borderWidth: 1.5,
+      borderColor: theme.border,
+      backgroundColor: theme.backgroundDefault,
+    },
+    listContainer: {
+      gap: Spacing.lg,
+      paddingHorizontal: Spacing.lg,
+    },
+    gradeGroup: {
+      gap: Spacing.md,
+    },
+    gradeHeader: {
+      borderRadius: BorderRadius.lg,
+    },
+    gradeHeaderContent: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      paddingVertical: Spacing.md,
+      paddingHorizontal: Spacing.lg,
+      borderRadius: BorderRadius.lg,
+    },
+    gradeHeaderLeft: {
+      flex: 1,
+      gap: Spacing.xs,
+    },
+    planCardTouchable: {
+    },
+    planCard: {
+      padding: Spacing.lg,
+      borderRadius: BorderRadius.lg,
+      borderWidth: 1.5,
+      borderColor: theme.border,
+      backgroundColor: theme.backgroundDefault,
+      boxShadow: '0px 2px 8px rgba(0, 0, 0, 0.04)',
+    },
+    planHeader: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      marginBottom: Spacing.sm,
+    },
+    planInfo: {
+      marginBottom: Spacing.md,
+      gap: Spacing.xs,
+    },
+    planHint: {
+      flexDirection: 'row',
+      justifyContent: 'flex-end',
+      paddingTop: Spacing.sm,
+      borderTopWidth: 1,
+      borderTopColor: theme.borderLight,
+    },
+    swipeActions: {
+      flexDirection: 'row',
+      alignItems: 'center',
+      height: '100%',
+      marginLeft: Spacing.md,
+      gap: Spacing.sm,
+    },
+    swipeActionDetail: {
+      width: 80,
+      height: '100%',
+      backgroundColor: theme.primary,
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: BorderRadius.lg,
+    },
+    swipeActionRename: {
+      width: 80,
+      height: '100%',
+      backgroundColor: '#6B7280',
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: BorderRadius.lg,
+    },
+    swipeActionDelete: {
+      width: 80,
+      height: '100%',
+      backgroundColor: theme.error,
+      justifyContent: 'center',
+      alignItems: 'center',
+      borderRadius: BorderRadius.lg,
+    },
+    buttonContainer: {
+      marginTop: Spacing.lg,
+      paddingHorizontal: Spacing.lg,
+      paddingBottom: Spacing['5xl'],
+    },
+    primaryButton: {
+      backgroundColor: theme.primary,
+      paddingVertical: Spacing.lg,
+      paddingHorizontal: Spacing.xl,
+      borderRadius: BorderRadius.lg,
+      alignItems: 'center',
+      height: 56,
+      justifyContent: 'center',
+      flexDirection: 'row',
+      gap: Spacing.sm,
+      boxShadow: '0px 4px 12px rgba(22, 120, 209, 0.35)',
+    },
+    modalOverlay: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    },
+    modalContent: {
+      backgroundColor: theme.backgroundDefault,
+      borderRadius: BorderRadius.xl,
+      width: '85%',
+      maxWidth: 400,
+      boxShadow: '0px 8px 24px rgba(0, 0, 0, 0.12)',
+    },
+    modalHeader: {
+      flexDirection: 'row',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      paddingVertical: Spacing.lg,
+      paddingHorizontal: Spacing.lg,
+      borderBottomWidth: 1.5,
+      borderBottomColor: theme.border,
+    },
+    modalBody: {
+      padding: Spacing.lg,
+    },
+    label: {
+      marginBottom: Spacing.sm,
+      fontWeight: '600' as const,
+    },
+    input: {
+      backgroundColor: theme.backgroundTertiary,
+      borderRadius: BorderRadius.lg,
+      paddingHorizontal: Spacing.md,
+      paddingVertical: Spacing.md,
+      color: theme.textPrimary,
+      fontSize: 16,
+      borderWidth: 1.5,
+      borderColor: theme.border,
+      height: 52,
+    },
+    modalFooter: {
+      flexDirection: 'row',
+      paddingVertical: Spacing.lg,
+      paddingHorizontal: Spacing.lg,
+      gap: Spacing.md,
+      borderTopWidth: 1.5,
+      borderTopColor: theme.border,
+    },
+    modalButton: {
+      flex: 1,
+      paddingVertical: Spacing.md,
+      borderRadius: BorderRadius.lg,
+      alignItems: 'center',
+      justifyContent: 'center',
+      height: 52,
+    },
+    cancelButton: {
+      backgroundColor: theme.backgroundDefault,
+      borderWidth: 1.5,
+      borderColor: theme.border,
+    },
+    submitButton: {
+      backgroundColor: theme.primary,
+      boxShadow: '0px 4px 12px rgba(22, 120, 209, 0.35)',
+    },
+  });
+};

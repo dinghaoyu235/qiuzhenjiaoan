@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  # 前端 Web 服务
+  web:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
+    environment:
+      - NODE_ENV=production
+    restart: unless-stopped
+    networks:
+      - app-network
+
+  # 后端 API 服务
+  api:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "9091:9091"
+    environment:
+      - NODE_ENV=production
+      - PORT=9091
+    restart: unless-stopped
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge

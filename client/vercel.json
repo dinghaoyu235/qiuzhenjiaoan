@@ -1,0 +1,16 @@
+{
+  "version": 2,
+  "name": "qiuzhenjiaoan-web",
+  "buildCommand": "npm run build:web",
+  "outputDirectory": "dist",
+  "installCommand": "pnpm install",
+  "devCommand": "expo start --web",
+  "framework": "expo",
+  "regions": ["hkg1"],
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://your-backend-domain.com/api/:path*"
+    }
+  ]
+}
