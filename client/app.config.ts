@@ -33,21 +33,6 @@ export default ({ config }: ConfigContext): ExpoConfig => {
     "plugins": [
       'expo-router',
       [
-        "expo-font",
-        {
-          "fonts": [
-            {
-              "src": "./node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome6_Solid.ttf",
-              "family": "FontAwesome6_Solid"
-            },
-            {
-              "src": "./node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts/FontAwesome6_Regular.ttf",
-              "family": "FontAwesome6_Regular"
-            }
-          ]
-        }
-      ],
-      [
         "expo-splash-screen",
         {
           "image": "./assets/images/splash-icon.png",
