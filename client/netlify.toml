@@ -1,19 +1,8 @@
 [build]
-  command = "pnpm run build:web"
+  base = "client"
+  command = "npx expo export --platform web"
   publish = "dist"
 
 [build.environment]
+  EXPO_PUBLIC_BACKEND_BASE_URL = "https://server-production-454c.up.railway.app"
   NODE_VERSION = "20"
-
-[[redirects]]
-  from = "/api/*"
-  to = "https://your-backend-domain.com/api/:splat"
-  status = 200
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-XSS-Protection = "1; mode=block"
-    X-Content-Type-Options = "nosniff"
-    Referrer-Policy = "strict-origin-when-cross-origin"
