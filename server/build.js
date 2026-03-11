@@ -15,6 +15,7 @@ try {
     external: externalList,
   });
   console.log('⚡ Build complete!');
+  console.log('📦 Build timestamp:', new Date().toISOString()); //
 } catch (e) {
   console.error(e);
   process.exit(1);
