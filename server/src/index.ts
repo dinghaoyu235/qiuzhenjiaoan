@@ -45,6 +45,6 @@ app.use('/api/v1/quotes', quotesRouter);
 // PPT generation routes
 app.use('/api/v1/ppt', pptGenerationRouter);
 
-app.listen(port, () => {
-  console.log(`Server listening at http://localhost:${port}/`);
+app.listen(port, '0.0.0.0', () => {
+  console.log(`Server listening on port ${port}`);
 });
