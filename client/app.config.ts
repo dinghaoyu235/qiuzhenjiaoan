@@ -1,5 +1,10 @@
 import { ExpoConfig, ConfigContext } from 'expo/config';
 
+// 临时硬编码后端 URL（作为兜底）
+if (!process.env.EXPO_PUBLIC_BACKEND_BASE_URL) {
+  (process.env as any).EXPO_PUBLIC_BACKEND_BASE_URL = 'https://server-production-454c.up.railway.app';
+}
+
 const appName = process.env.COZE_PROJECT_NAME || process.env.EXPO_PUBLIC_COZE_PROJECT_NAME || '求真教案';
 const projectId = process.env.COZE_PROJECT_ID || process.env.EXPO_PUBLIC_COZE_PROJECT_ID;
 const slugAppName = projectId ? `app${projectId}` : 'myapp';
@@ -28,14 +33,7 @@ export default ({ config }: ConfigContext): ExpoConfig => {
     "web": {
       "bundler": "metro",
       "output": "single",
-      "favicon": "./assets/images/favicon.png",
-      "build": {
-        "babel": {
-          "include": [
-            "expo-font"
-          ]
-        }
-      }
+      "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
       'expo-router',
